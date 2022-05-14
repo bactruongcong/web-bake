@@ -406,3 +406,9 @@ header{
 .feedback-content .feedback-name{
     color: white;
 }
+.feedback-content .owl-theme .owl-dots .owl-dot span{
+    background-color: rgba(0, 0, 0, 0.509);
+}
+.feedback-content .owl-theme .owl-dots .owl-dot.active span{
+    background-color: black;
+}
