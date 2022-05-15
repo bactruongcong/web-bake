@@ -31,19 +31,19 @@
         <div class="header-content">
             <p>BAKE</p>
             <nav>
-                <ul>
+                <ul id="main-nav">
                     <li class="active"><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CLIENTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#intro">ABOUT</a></li>
+                    <li><a href="#service">SERVICES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#team">CLIENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- Carousel -->
-    <section class="carousel">
+    <section id="carousel" class="carousel">
         <div class="carousel-content">
             <h1>Best Bake Here</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, sequi.</p>
@@ -51,7 +51,7 @@
         </div>
     </section>
     <!-- Intro -->
-    <section class="intro">
+    <section id="intro" class="intro">
         <div class="intro-item intro-text">
             <div>
                 <h3>Tradition</h3>
@@ -100,7 +100,7 @@
         </div>
     </section>
     <!-- Number -->
-    <section class="number">
+    <section id="number" class="number">
         <div class="number-content">
             <div class="number-item">
                 <p class="counter">3500</p>
@@ -121,7 +121,7 @@
         </div>
     </section>
     <!-- Services -->
-    <section class="services">
+    <section id="service" class="services">
         <h2>OUR SERVICES</h2>
         <div class="services-content">
             <div class="service-item">
@@ -151,7 +151,7 @@
         </div>
     </section>
     <!-- Gallery -->
-    <section class="gallery">
+    <section id="gallery" class="gallery">
         <h2>OUR GALLERY</h2>
         <div class="gallery-content">
             <figure class="gallery-item gallery-g1">
@@ -223,7 +223,7 @@
         </div>
     </section>
     <!-- Team -->
-    <section class="team">
+    <section id="team" class="team">
         <h2>BAKE TEAM</h2>
         <div class="team-content">
             <div class="team-item">
@@ -337,7 +337,7 @@
         </div>
     </section>
     <!-- Feedback -->
-    <section class="feedback">
+    <section id="feedback" class="feedback">
         <h2>TESTIMONIALS</h2>
         <div class="feedback-content">
             <div class="owl-carousel owl-theme">
@@ -363,7 +363,7 @@
         </div>
     </section>
     <!-- Contact -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>CONTACT</h2>
         <div class="contact-form">
             <form>
@@ -505,6 +505,20 @@
     <!-- BACK-TO-TOP -->
     <script src="./js/util.js"></script>
     <script src="./js/main-backtotop.js"></script>
+    <!-- NAV SCRIPT -->
+    <script>
+        var mainNav = document.getElementById("main-nav");
+        var listNav = mainNav.getElementsByTagName("li");
+        for(var i = 0; i < listNav.length; i++){
+            listNav[i].addEventListener("click",function(){
+                var current = document.querySelector("#main-nav .active");
+                //xoa class active cua the dang duoc gan
+                current.className = current.className.replace("active","");
+                // them class active cho the li duoc click
+                this.className += "active";
+            });
+        }
+    </script>
 </body>
 
 </html>
