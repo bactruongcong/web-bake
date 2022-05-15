@@ -579,3 +579,19 @@ footer{
     visibility: visible;
     opacity: 1;
   }
+.team-content .team-item1{
+    animation: upDown 3s linear 0s infinite;
+   
+}
+@keyframes upDown{
+    0%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-1deg);
+    }
+    /* 100%{
+        transform: rotate(1deg);
+    } */
+    
+}
