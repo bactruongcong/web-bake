@@ -39,8 +39,10 @@ button:hover{
     border-color: #ff0e83;
 }
 header{
+    position: fixed;
     background-color: #4e2a84;
     color: #fff;
+    width: 100%;
 }
 .header-content{
     display: flex;
@@ -442,4 +444,136 @@ header{
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
+    transition: all 0.5s;
 }
+.contact-form form input:focus{
+    outline: none;
+    box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.504)
+}
+.contact-form form textarea{
+    outline: none;
+    resize: none;
+    border: 1px solid black;
+}
+.contact-form form textarea::placeholder{
+    color: blue;
+}
+.contact-form form button{
+    border-radius: 0px;
+}
+.contact-form form button:hover{
+    border-color: black;
+    color: white;
+    background-color: black;
+}
+.contact-map iframe{
+    width: 100%;
+    margin-top: 30px;
+}
+.contact-info{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.contact-info i{
+    font-size: 2rem;
+    color: #4e2a84;
+}
+.contact-info p{
+    margin: 10px 0;
+    font-size: 0.8rem;
+    
+}
+/* FOOTER */
+footer{
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+}
+.footer-item{
+    width: 25%;
+    padding: 0 20px;
+}
+.footer-item h3{
+    font-size: 1.3rem;
+    color:#ff0e83;
+    margin-bottom: 1rem;
+}
+.footer-item p{
+    font-size: 0.8rem;
+    line-height: 28px;
+    padding-bottom: 1rem;
+}
+.footer-copy{
+    text-align: center;
+}
+.footer-content{
+    padding-bottom: 50px;
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+.footer-item .footer-social i{
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.footer-social i:hover{
+    color:#ff0e83;
+}
+.item-time{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted white;
+}
+.item-time p{
+    margin: 10px 0;
+    padding-bottom: 0;
+}
+.footer-item .form-sub input{
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.footer-item .form-sub input:focus{
+    outline: none;
+}
+.footer-item .form-sub button{
+    padding: 7px 16px;
+    border: 1px solid black;
+    font-weight: 700;
+    color: black;
+    border-radius: 2px;
+}
+.footer-copy p {
+    font-size: 0.8rem;
+}
+.footer-copy p span{
+    color: #ff0e83;
+}
+.backtotop{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
+}
+.backtotop i {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 36px;
+    color: #0BBBCC;
+    border: 2px solid #0BBBCC;
+    border-radius: 50%;
+}
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+  }
